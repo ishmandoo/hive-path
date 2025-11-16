@@ -157,4 +157,3 @@ The test suite includes comprehensive tests for:
 ## License
 
 MIT
-

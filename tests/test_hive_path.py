@@ -1,8 +1,8 @@
 """Tests for HivePath class."""
 
-import pytest
 from pathlib import Path
-from hive_path import HivePath
+
+from hive_path.hive_path import HivePath
 
 
 class TestHivePathCreation:
@@ -276,4 +276,3 @@ class TestEdgeCases:
         
         assert rel_path.partitions == {"year": "2023"}
         assert abs_path.partitions == {"year": "2023"}
-

@@ -1,49 +1,19 @@
-[build-system]
-requires = ["setuptools>=61.0", "wheel"]
-build-backend = "setuptools.build_meta"
-
 [project]
 name = "hive-path"
 version = "0.1.0"
-description = "A simple pathlib.Path subclass for Hive-style partitioning"
+description = "A simple package pathlib extension for paths with Hive-style partitioning."
 readme = "README.md"
-requires-python = ">=3.7"
-license = {text = "MIT"}
 authors = [
-    {name = ""}
+    { name = "Ben", email = "ishmandoo@gmail.com" }
 ]
-classifiers = [
-    "Development Status :: 3 - Alpha",
-    "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-]
-keywords = ["pathlib", "hive", "partitioning", "path", "data-lake"]
+requires-python = ">=3.10"
+dependencies = []
 
-[project.urls]
-Homepage = "https://github.com/ishmandoo/hive-path"
-Repository = "https://github.com/ishmandoo/hive-path"
-Issues = "https://github.com/ishmandoo/hive-path/issues"
+[build-system]
+requires = ["uv_build>=0.9.9,<0.10.0"]
+build-backend = "uv_build"
 
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
-    "pytest>=7.0.0",
+    "pytest>=9.0.1",
 ]
-
-[tool.setuptools]
-packages = ["hive_path"]
-
-[tool.pytest.ini_options]
-testpaths = ["tests"]
-python_files = ["test_*.py"]
-python_classes = ["Test*"]
-python_functions = ["test_*"]
-addopts = "-v --tb=short"
-

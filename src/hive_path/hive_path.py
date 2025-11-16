@@ -168,4 +168,3 @@ class HivePath(Path):
         new_partitions = self.partitions.copy()
         new_partitions[key] = value
         return self.with_partitions(str(self.base_path()), new_partitions)
-
